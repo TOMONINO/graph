@@ -1,0 +1,52 @@
+<%= form_with(model: record, local: true) do |form| %>
+  <% if record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+      <% record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.date_select :day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height %>
+    <%= form.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.text_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BMI %>
+    <%= form.text_field :BMI %>
+  </div>
+
+  <div class="field">
+    <%= form.label :targetBMI %>
+    <%= form.text_field :targetBMI %>
+  </div>
+
+  <div class="field">
+    <%= form.label :targetweight %>
+    <%= form.text_field :targetweight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :compareweight %>
+    <%= form.text_field :compareweight %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

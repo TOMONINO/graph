@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @record.day %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @record.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @record.weight %>
+</p>
+
+<p>
+  <strong>Bmi:</strong>
+  <%= @record.BMI %>
+</p>
+
+<p>
+  <strong>Targetbmi:</strong>
+  <%= @record.targetBMI %>
+</p>
+
+<p>
+  <strong>Targetweight:</strong>
+  <%= @record.targetweight %>
+</p>
+
+<p>
+  <strong>Compareweight:</strong>
+  <%= @record.compareweight %>
+</p>
+
+<%= link_to 'Edit', edit_record_path(@record) %> |
+<%= link_to 'Back', records_path %>
